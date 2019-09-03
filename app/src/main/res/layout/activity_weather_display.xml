@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        tools:context=".ui.WeatherDisplayActivity">
+
+    <ProgressBar
+            android:id="@+id/waitProgressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+    <LinearLayout
+            android:id="@+id/linLayDatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Select Date"
+                android:padding="4dp"
+                android:textColor="@color/edit_text_color"
+                android:textColorHint="@color/edit_text_place_holder_color"
+                android:textSize="16sp" />
+
+        <ImageView
+                android:id="@+id/imageViewCalender"
+                android:layout_width="wrap_content"
+                android:padding="3dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/textViewDate"
+                android:src="@drawable/ic_calender" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:cardCornerRadius="4dp"
+            android:layout_below="@id/linLayDatePicker"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selected Date : "
+                    android:padding="6dp"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewDateValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:layout_toRightOf="@id/textViewDate"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewDateValue"
+                    android:text="Temperature : "
+                    android:padding="6dp"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTempValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewDateValue"
+                    android:padding="6dp"
+                    android:layout_toRightOf="@id/textViewTemp"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTempMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTemp"
+                    android:text="Temperature Min : "
+                    android:padding="6dp"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTempMinValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTemp"
+                    android:padding="6dp"
+                    android:layout_toRightOf="@id/textViewTempMin"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTempMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTempMin"
+                    android:text="Temperature Min : "
+                    android:padding="6dp"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+
+            <TextView
+                    android:id="@+id/textViewTempMaxValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTempMin"
+                    android:padding="6dp"
+                    android:layout_toRightOf="@id/textViewTempMax"
+                    android:textColor="@color/edit_text_color"
+                    android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

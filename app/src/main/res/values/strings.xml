@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherDemo</string>
+    <string name="date_is_not_prime">Uh oh! Selected date is not prime</string>
+    <string name="error">An error occurred. Retry later</string>
+</resources>
